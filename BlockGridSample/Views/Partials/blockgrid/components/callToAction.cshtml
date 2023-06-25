@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var callToActionContent = (ContentModels.CallToAction)Model.Content;
+}
+
+@if(callToActionContent.Link != null)
+{
+    var buttonType = !string.IsNullOrWhiteSpace(callToActionContent.Type)
+        ? callToActionContent.Type.ToLower() : "default";
+    
+    <a href="@callToActionContent.Link.Url" target="@callToActionContent.Link.Target" class="btn btn-@buttonType.ToLower()">
+        @callToActionContent.Link.Name
+    </a>
+}

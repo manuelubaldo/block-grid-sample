@@ -12,6 +12,9 @@
     <Content Include="App_Plugins\BlockGrid\callToAction.html" />
     <Content Include="App_Plugins\BlockGrid\card.html" />
     <Content Include="App_Plugins\BlockGrid\headline.html" />
+    <Content Include="App_Plugins\BlockGrid\layout\accordion.html" />
+    <Content Include="App_Plugins\BlockGrid\layout\carousel.html" />
+    <Content Include="App_Plugins\BlockGrid\layout\tab.html" />
     <Content Include="App_Plugins\BlockGrid\tabItem.html" />
     <Content Include="App_Plugins\BlockGrid\layout\oneColumnLayout.html" />
     <Content Include="App_Plugins\BlockGrid\layout\threeColumnLayout.html" />

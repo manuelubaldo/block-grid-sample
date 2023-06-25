@@ -1,0 +1,17 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var headlineContent = (ContentModels.Headline)Model.Content;
+}
+@if (headlineContent.Type == "H1")
+{
+    <h1>@headlineContent.Text</h1>
+}
+else if (headlineContent.Type == "H2")
+{
+    <h2>@headlineContent.Text</h2>
+}
+else if (headlineContent.Type == "H3")
+{
+    <h3>@headlineContent.Text</h3>
+}

@@ -1,0 +1,9 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem<ContentModels.TwoColumnLayout,ContentModels.BackgroundLayoutSettings>>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var settings = Model.Settings;
+    var content = Model.Content;
+}
+<section class="container">
+    @await Html.GetBlockGridItemAreasHtmlAsync(Model)
+</section>

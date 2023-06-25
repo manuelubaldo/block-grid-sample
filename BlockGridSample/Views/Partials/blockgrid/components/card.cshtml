@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var cardContent = (ContentModels.Card)Model.Content;
+    var image = cardContent.Image;
+}
+
+<div class="card">
+    @if (image != null)
+    {
+        var altText = !string.IsNullOrWhiteSpace(image.Value<string>("altText")) ? image.Value<string>("altText") : cardContent.Title;
+        <img src="@image.GetCropUrl(quality:80,furtherOptions:"&format=webp")" class="card-img-top" alt="@altText">
+    }
+    
+    <div class="card-body">
+        <h3 class="card-title">@cardContent.Title</h3>
+        <div class="card-text">
+            @Html.Raw(cardContent.Content)
+        </div>
+        @if (cardContent.CallToAction != null)
+        {
+            <a href="@cardContent.CallToAction.Url" class="btn btn-primary" target="@cardContent.CallToAction.Target">
+                @cardContent.CallToAction.Name
+            </a>
+        }
+    </div>
+</div>
+

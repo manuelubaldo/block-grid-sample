@@ -1,0 +1,9 @@
+﻿<div class="card" style="">
+    {{mediaItem = (block.data.image[0].mediaKey | mediaItemResolver) ; ""}}
+    <img ng-src="{{mediaItem.mediaLink}}" " class="card-img-top" alt="...">
+    <div class="card-body">
+        <h3 class="card-title" ng-if="block.data.title != null">{{block.data.title}}</h3>
+        <div class="card-text" ng-if="block.data.content.length > 0" ng-bind-html="block.data.content"></div>
+        <button type="button" class="btn btn-primary" ng-if="block.data.callToAction != null">{{block.data.callToAction[0].name}}</button>
+    </div>
+</div>

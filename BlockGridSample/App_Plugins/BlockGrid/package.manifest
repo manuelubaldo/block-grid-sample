@@ -1,0 +1,7 @@
+{
+  "javascript": [
+    "~/App_Plugins/BlockGrid/app/media.block.controller.js",
+    "~/App_Plugins/BlockGrid/app/section.block.controller.js",
+    "~/App_Plugins/BlockGrid/app/callToAction.block.controller.js"
+  ]
+}
